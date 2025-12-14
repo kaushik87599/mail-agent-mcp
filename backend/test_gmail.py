@@ -23,7 +23,7 @@ def test_connection():
 
     # 2. List last 3 emails (Subject lines only)
     print("\n--- Last 3 Emails ---")
-    results = service.users().messages().list(userId="me", maxResults=3).execute()
+    results = service.users().messages().list(userId="me", maxResults=6).execute()
     messages = results.get("messages", [])
 
     for msg in messages:
